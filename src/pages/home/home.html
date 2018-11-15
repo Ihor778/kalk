@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar  color = 'danger'>
+    <ion-title>Kalk</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" floating>Masa</ion-label>
+    <ion-input [(ngModel)]="masa"></ion-input>
+  </ion-item>
+  <ion-list radio-group [(ngModel)]="vubor">  
+    <ion-item>
+      <ion-label>DwMas</ion-label>
+      <ion-radio value="dm"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>ConstMas</ion-label>
+      <ion-radio value="cm"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>UpMas</ion-label>
+      <ion-radio value="um"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="kalk()">Kalk</button>
+  <ion-label>Белки: {{proto}} Жири: {{ji}} Вуглеводи: {{ugl}}</ion-label>
+</ion-content>
